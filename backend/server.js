@@ -15,7 +15,9 @@ app.use(express.json())
 //   console.log(req.path, req.method)
 //   next()
 // })
-
+app.get('/',(req,res)=>{
+  res.send('<p>Hello Backend for Workout Tracker is hosted here</p>')
+})
 // routes
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
