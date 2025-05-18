@@ -25,6 +25,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "e3533c5f-294d-4af6-8bed-a38601b0b865", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "c0b8fae9-df9b-4f67-9639-4e6e85dca139", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
     <title>React App</title>
   </head>
   <body>
